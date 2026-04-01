@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
@@ -35,7 +36,9 @@ class CustomListTile extends StatelessWidget {
       title: Text(menuItems.title),
       onTap: () {
         //todo: navegar a otra pantalla
-        Navigator.pushNamed(context, menuItems.link);
+        //Navigator.pushNamed(context, menuItems.link);
+
+        context.push(menuItems.link);
       },
     );
   }
