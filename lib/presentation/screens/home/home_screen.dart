@@ -41,8 +41,8 @@ class CustomListTile extends StatelessWidget {
         //todo: navegar a otra pantalla
         //Navigator.pushNamed(context, menuItems.link);
 
-        //context.push(menuItems.link);
-        context.pushNamed(CardsScreen.name);
+        context.push(menuItems.link);
+        //context.pushNamed(CardsScreen.name);
       },
     );
   }
