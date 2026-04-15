@@ -39,4 +39,22 @@ const List<MenuItems> appMenuItem = [
     link: '/snaksbars',
     icon: Icons.info_outline,
   ),
+  MenuItems(
+    title: 'animated container',
+    subTitle: 'animaciones implícitas',
+    link: '/animated',
+    icon: Icons.check_box_outline_blank_rounded,
+  ),
+  MenuItems(
+    title: 'ui-controls',
+    subTitle: 'controladores de ui',
+    link: '/ui-controls',
+    icon: Icons.control_camera_sharp,
+  ),
+  MenuItems(
+    title: 'tutorial',
+    subTitle: 'tutorial de la app',
+    link: '/tutorial',
+    icon: Icons.school_outlined,
+  ),
 ];
