@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
-import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
-import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -11,7 +10,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(title: const Text('widgets + material 3')),
       body: ListView.builder(
         itemCount: appMenuItem.length,
@@ -20,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           return CustomListTile(menuItems: menuItems);
         },
       ),
+      drawer: SideMenu(scaffold: scaffoldKey),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/presentation/screens/theme/theme_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls/ui_controls_screen.dart';
 
 // GoRouter configuration
@@ -50,6 +52,16 @@ final appRouter = GoRouter(
       path: '/infinite',
       name: InfiniteScrollScreen.name,
       builder: (context, state) => InfiniteScrollScreen(),
+    ),
+    GoRoute(
+      path: '/counter',
+      name: CounterScreen.name,
+      builder: (context, state) => CounterScreen(),
+    ),
+    GoRoute(
+      path: '/theme',
+      name: ThemeScreen.name,
+      builder: (context, state) => ThemeScreen(),
     ),
   ],
 );
